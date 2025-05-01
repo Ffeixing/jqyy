@@ -51,26 +51,17 @@ function navigate(url) {
 // 在navigate函数中添加对清理缓存的处理
 function navigate(url) {
     if (url === 'clean_cache') {
-		
-        return;
         
-    }
 
-
-}
-    
-
-// 在navigate函数中添加对分享的处理
-function navigate(url) {
-    if (url === 'share') {
-        navigator.share({
+navigator.share({
                     title: '趣加应用分享',
                     text: '我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）'
                 });
         return;
     }
-
+    window.location.href = url;
 }
+
 // 初始化
 window.onload = function() {
     setDateAndGreeting();
@@ -81,3 +72,6 @@ window.onload = function() {
         cards[i].addEventListener('click', createRipple);
     }
 };
+
+
+
