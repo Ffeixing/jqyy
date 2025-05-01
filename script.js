@@ -56,7 +56,19 @@ function navigate(url) {
     }
     window.location.href = url;
 }
+function navigate(url) {
+    if (url === 'share') {
+if (navigator.share) {
+                navigator.share({
+                    text: '我发现了个超级好用的资源网站,分享给你--趣加应用http://jqyy.store',
+                    
+                });
+return;
+            }
 
+    }
+    window.location.href = url;
+}
 // 初始化
 window.onload = function() {
     setDateAndGreeting();
