@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+        window.onload = function() {
+            // 检测是否为移动设备
+            function isMobile() {
+                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            }
+
+            if (!isMobile()) {
+                // 如果是移动设备，跳转到指定链接
+                window.location.href = "http://qujiayingyong.online";
+            }
+        };
+    </script>
 </head>
 <body>
     <div class="header">
