@@ -51,23 +51,25 @@ function navigate(url) {
 // 在navigate函数中添加对清理缓存的处理
 function navigate(url) {
     if (url === 'clean_cache') {
-        alert('清理完成');
+		
         return;
+        
     }
-    window.location.href = url;
+
+
 }
+    
+
+// 在navigate函数中添加对分享的处理
 function navigate(url) {
     if (url === 'share') {
-if (navigator.share) {
-                navigator.share({
-                    text: '我发现了个超级好用的资源网站,分享给你--趣加应用http://jqyy.store',
-                    
+        navigator.share({
+                    title: '趣加应用分享',
+                    text: '我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）'
                 });
-return;
-            }
-
+        return;
     }
-    window.location.href = url;
+
 }
 // 初始化
 window.onload = function() {
