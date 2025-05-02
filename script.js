@@ -25,53 +25,52 @@ function setDateAndGreeting() {
     document.querySelector('.greeting').textContent = greeting;
 }
 
-// 点击卡片效果
-function createRipple(event) {
-    var card = this;
-    var rect = card.getBoundingClientRect();
-    var x = event.clientX - rect.left;
-    var y = event.clientY - rect.top;
-    
-    var ripple = document.createElement('span');
-    ripple.className = 'card-effect';
-    ripple.style.left = x + 'px';
-    ripple.style.top = y + 'px';
-    
-    card.appendChild(ripple);
-    
-    setTimeout(function() {
-        ripple.remove();
-    }, 600);
-}
 
 // 导航函数
 function navigate(url) {
-    window.location.href = url;
-}
-// 在navigate函数中添加对清理缓存的处理
-function navigate(url) {
     if (url === 'clean_cache') {
-        
-
-navigator.share({
-                    title: '趣加应用分享',
-                    text: '我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）'
-                });
+        alert('清理完成');
         return;
     }
     window.location.href = url;
 }
 
+// 分享函数
+function shareApp() {
+    // 检查浏览器是否支持Web Share API
+    if (navigator.share) {
+        navigator.share({
+            title: '趣加应用分享',
+            text: '我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）',
+            url: 'https://jqyy.store'
+        }).catch(err => {
+            console.log('分享失败:', err);
+            fallbackShare();
+        });
+    } else {
+        fallbackShare();
+    }
+}
+
+// 不支持Web Share API时的备用分享方案
+function fallbackShare() {
+    // 这里可以添加复制到剪贴板或其他备用分享方式
+    alert('已复制分享内容到剪贴板，请粘贴分享给好友！\n\n我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）');
+    
+    // 复制到剪贴板
+    const textToCopy = '我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）';
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        console.log('内容已复制到剪贴板');
+    }).catch(err => {
+        console.error('无法复制内容:', err);
+    });
+}
+
 // 初始化
 window.onload = function() {
     setDateAndGreeting();
-    
-    // 为所有卡片添加点击效果
-    var cards = document.querySelectorAll('.big-card, .small-card');
-    for (var i = 0; i < cards.length; i++) {
-        cards[i].addEventListener('click', createRipple);
-    }
 };
+    
 
 
 
