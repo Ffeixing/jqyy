@@ -122,6 +122,12 @@ var appData = [
         url: "https://app.qujiayingyong.online/app.html?icon=https%3A%2F%2Fstatic.bcmcdn.com%2Fcoco%2Fplayer%2Funstable%2FSkYLecelgl.image%2Fjpeg%3Fhash%3DFiI-wE4MCp5RIsik-y3yvRxSX3-w&name=QQ8.2.6&link=https%3A%2F%2Fwwpa.lanzouo.com%2FiVshj2v08myd&pwd=8rbc&图片一=https%3A%2F%2Fstatic.bcmcdn.com%2Fcoco%2Fplayer%2Funstable%2FS1wPx5eglx.image%2Fjpeg%3Fhash%3DFjaNipvTPFHVtr1Wq7FfyluVo09n&图片二=https%3A%2F%2Fstatic.bcmcdn.com%2Fcoco%2Fplayer%2Funstable%2FHyADeqxgxg.image%2Fjpeg%3Fhash%3DFu1zQL1vnCWxPl-nqNjBFborW-Hp&简介=QQ8.2.6官方2020旧版本，云控可尝试%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20外置分享密码：8rbc%20%20%20%20%20%20%20%20%20%20%20%20%20该内容为用户上传，仅供用户学习使用，请在下载后24小时内删除，若出现任何未知问题，我们将不承担任何责任"
     },
 
+{
+        name: "小红书7.4.2",
+        desc: "Android5.0+ | 35.1 MB | 小红书官方精简版，安装完不足200M，不支持发布内容",
+        icon: "https://static.codemao.cn/coco/player/unstable/rkFVmuCW0.image/png?hash=FsAPCQTuOaqInI_5DgzT5k-oLWvM",
+        url: "https://app.qujiayingyong.online/app.html?icon=https%3A%2F%2Fstatic.codemao.cn%2Fcoco%2Fplayer%2Funstable%2FrkFVmuCW0.image%2Fpng%3Fhash%3DFsAPCQTuOaqInI_5DgzT5k-oLWvM&name=小红书7.4.2&link=https%3A%2F%2Fwwb.lanzouo.com%2FissfM1x5ifzi&pwd=9ypb&图片一=https%3A%2F%2Fstatic.codemao.cn%2Fcoco%2Fplayer%2Funstable%2FBywPXO0WR.image%2Fjpeg%3Fhash%3DFgJYs-X7pGJtCAhBPUwVamVmBoAp&图片二=https%3A%2F%2Fstatic.codemao.cn%2Fcoco%2Fplayer%2Funstable%2FBJgqvmO0ZR.image%2Fjpeg%3Fhash%3DFjQkPvrtjPsgrBNPriTr-7VbLH0A&简介=小红书官方精简版，不足200M%E3%80%82基础功能齐全，不支持发布内容%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20外置分享密码：9ypb%20%20%20%20%20%20%20%20%20%20%20%20%20该应用为用户上传，仅供用户测试使用，请在下载后24小时内删除，若出现任何未知问题，我们将不承担任何责任"
+    },
 
 
 
