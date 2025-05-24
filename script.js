@@ -49,7 +49,7 @@ function shareApp() {
             fallbackShare();
         });
     } else {
-            alert('文案复制成功，快去粘贴吧^_^');
+            
         fallbackShare();
     }
 }
@@ -57,8 +57,14 @@ function shareApp() {
 // 不支持Web Share API时的备用分享方案
 
 function fallbackShare() {
-    navigator.clipboard.writeText('我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）');
-    
+    navigator.clipboard.writeText('我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）')
+        .then(() => {
+            alert('内容已复制到剪贴板！');
+        })
+        .catch(err => {
+            console.error('复制失败:', err);
+            alert('复制失败，请手动复制。');
+        });
 }
 
 
@@ -66,18 +72,18 @@ function fallbackShare() {
 // 初始化
 window.onload = function() {
     setDateAndGreeting();
-
-         // 检测是否为移动设备
-        function isMobile() {
-            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        }
-
-        if (!isMobile()) {  // 添加了!取反操作符
-            // 如果不是移动设备，跳转到指定链接
-            window.location.href = "http://qujiayingyong.online";
-        }
 };
     
+//UA识别
+window.onload = function() {
 
+    // 检测是否为移动设备
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (!isMobile) {
+        // 如果不是移动设备，跳转到指定链接
+        window.location.href = "http://qujiayingyong.online";
+    }
+};
 
 
