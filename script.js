@@ -71,11 +71,7 @@ function fallbackShare() {
 
 // 初始化
 window.onload = function() {
-    setDateAndGreeting();
-};
-    
-//UA识别
-window.onload = function() {
+    setDateAndGreeting(); // 你自己定义的函数
 
     // 检测是否为移动设备
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -85,5 +81,3 @@ window.onload = function() {
         window.location.href = "http://qujiayingyong.online";
     }
 };
-
-
