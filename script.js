@@ -1,15 +1,3 @@
-//UA识别
-window.onload = function() {
-        // 检测是否为移动设备
-        function isMobile() {
-            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        }
-
-        if (!isMobile()) {  // 添加了!取反操作符
-            // 如果不是移动设备，跳转到指定链接
-            window.location.href = "http://qujiayingyong.online";
-        }
-    };
 
 // 设置日期和问候语
 function setDateAndGreeting() {
@@ -61,6 +49,7 @@ function shareApp() {
             fallbackShare();
         });
     } else {
+            alert('文案复制成功，快去粘贴吧^_^');
         fallbackShare();
     }
 }
@@ -69,13 +58,24 @@ function shareApp() {
 
 function fallbackShare() {
     navigator.clipboard.writeText('我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）');
-    alert('文案复制成功，快去粘贴吧^_^');
+    
 }
+
 
 
 // 初始化
 window.onload = function() {
     setDateAndGreeting();
+
+         // 检测是否为移动设备
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        if (!isMobile()) {  // 添加了!取反操作符
+            // 如果不是移动设备，跳转到指定链接
+            window.location.href = "http://qujiayingyong.online";
+        }
 };
     
 
