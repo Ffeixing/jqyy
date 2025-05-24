@@ -56,7 +56,7 @@ function shareApp() {
 
 function fallbackShare() {
     navigator.clipboard.writeText('我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）');
-    alert("内容复制成功，快去粘贴吧”);
+    alert('文案复制成功，快去粘贴吧^_^');
 }
 
 
