@@ -1,3 +1,16 @@
+//UA识别
+window.onload = function() {
+        // 检测是否为移动设备
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        if (!isMobile()) {  // 添加了!取反操作符
+            // 如果不是移动设备，跳转到指定链接
+            window.location.href = "http://qujiayingyong.online";
+        }
+    };
+
 // 设置日期和问候语
 function setDateAndGreeting() {
     var now = new Date();
