@@ -53,18 +53,24 @@ function shareApp() {
         fallbackShare();
     }
 }
-
+function showTip(msg) {
+    const tip = document.getElementById('copy-tip');
+    tip.textContent = msg;
+    tip.style.display = 'block';
+    setTimeout(() => {
+        tip.style.display = 'none';
+    }, 2000); // 2秒后隐藏
+}
 // 不支持Web Share API时的备用分享方案
 
 function fallbackShare() {
     navigator.clipboard.writeText('我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）')
-        .then(() => {
-            alert('内容已复制到剪贴板！');
-        })
-        .catch(err => {
-            console.error('复制失败:', err);
-            alert('复制失败，请手动复制。');
-        });
+    .then(() => {
+        showTip('内容已复制到剪贴板！');
+    })
+    .catch(() => {
+        showTip('复制失败，请手动复制。');
+    });
 }
 
 
