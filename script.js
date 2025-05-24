@@ -55,7 +55,7 @@ function shareApp() {
 // 不支持Web Share API时的备用分享方案
 
 function fallbackShare() {
-    alert("1111");
+    navigator.clipboard.writeText('我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）');
 }
 
 
