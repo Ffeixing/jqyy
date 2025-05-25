@@ -49,7 +49,7 @@ function shareApp() {
             fallbackShare();
         });
     } else {
-        //showTip('复制成功，去粘贴吧');
+        
         fallbackShare();
     }
 }
