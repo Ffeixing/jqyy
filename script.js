@@ -38,6 +38,7 @@ function navigate(url) {
 
 // 分享函数
 function shareApp() {
+    navigator.clipboard.writeText('我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store在浏览器打开')
     // 检查浏览器是否支持Web Share API
     if (navigator.share) {
         navigator.share({
@@ -61,17 +62,9 @@ function showTip(msg) {
         tip.style.display = 'none';
     }, 2000); // 2秒后隐藏
 }
-// 不支持Web Share API时的备用分享方案
 
-
-function fallbackShare() {
-    navigator.clipboard.writeText('我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store在浏览器打开')
-    .then(() => {
-        showTip('内容已复制到剪贴板！');
-    })
-    .catch(() => {
-        showTip('复制失败，请手动复制。');
-    });
+function fallbackShare() { 
+     showTip('复制成功，去粘贴吧');
 }
 
 
