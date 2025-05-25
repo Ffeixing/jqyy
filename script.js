@@ -30,7 +30,7 @@ function setDateAndGreeting() {
 // 导航函数
 function navigate(url) {
     if (url === 'clean_cache') {
-        alert('清理完成');
+        showTip('清理完成');
         return;
     }
     window.location.href = url;
@@ -49,7 +49,7 @@ function shareApp() {
             fallbackShare();
         });
     } else {
-        showTip('复制成功，去粘贴吧');
+        //showTip('复制成功，去粘贴吧');
         fallbackShare();
     }
 }
