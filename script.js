@@ -63,6 +63,10 @@ function showTip(msg) {
 }
 // 不支持Web Share API时的备用分享方案
 
+function fallbackShare() {
+    navigator.clipboard.writeText('我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）')
+}
+
 /*
 function fallbackShare() {
     navigator.clipboard.writeText('我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）')
@@ -74,10 +78,6 @@ function fallbackShare() {
     });
 }
 */
-function fallbackShare() {
-    navigator.clipboard.writeText('我发现了一个宝藏网站--趣加应用，分享给你：jqyy.store（在浏览器打开）');
-    //showTip('复制成功，去粘贴吧');
-}
 
 
 
